@@ -5,7 +5,7 @@ description = "Default template for PDM package"
 authors = [
     {name = "Jhonatan Ramos Felix", email = "jhonyrf@gmail.com"},
 ]
-dependencies = ["OrganizingDatasets @ file:///${PROJECT_ROOT}/../../Tools/OrganizingDatasets", "SyntheticDatasets @ file:///${PROJECT_ROOT}/../../Tools/SyntheticDatasets"]
+dependencies = ["OrganizingDatasets @ file:///${PROJECT_ROOT}/../../Tools/OrganizingDatasets", "SyntheticDatasets @ file:///${PROJECT_ROOT}/../../Tools/SyntheticDatasets", "pandas-plink>=2.3.2"]
 requires-python = ">=3.12.3, <3.13"
 readme = "README.md"
 license = {text = "MIT"}
@@ -13,3 +13,8 @@ license = {text = "MIT"}
 
 [tool.pdm]
 distribution = false
+
+[dependency-groups]
+notebooks = [
+    "jupyterlab>=4.6.3",
+]
